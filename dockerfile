@@ -1,3 +1,4 @@
-FROM nginx:latest
-COPY index.html /usr/share/nginx/html/index.html
-EXPOSE 80
+FROM eclipse-temurin:17-jdk
+WORKDIR /app
+COPY target/simple-java-app-1.0.jar app.jar
+CMD ["java", "-jar", "app.jar"]
