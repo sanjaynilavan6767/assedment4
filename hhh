@@ -1,0 +1,12 @@
+stage('Build JAR') {
+            steps {
+                bat 'mvn clean package'
+            }
+        }
+
+        // ✅ 3. DEBUG (Optional but VERY useful)
+        stage('Check Target') {
+            steps {
+                bat 'dir target'
+            }
+        }
